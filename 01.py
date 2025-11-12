@@ -1,4 +1,5 @@
 import streamlit as st
+import google.generativeai as genai
 import hashlib
 import base64
 import os
@@ -372,4 +373,5 @@ else:
                 except Exception as e:
                     st.error(f"Error: {e}")
                     st.session_state.chat_history.append({"role": "system", "text": f"Error: {e}", "sources": []})
+
 
