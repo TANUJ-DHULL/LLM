@@ -11,8 +11,8 @@ from PIL import Image # pyright: ignore[reportMissingImports]asf
 
 # --- CONFIGURATION ---
 # API Key (Streamlit secrets mein daalna behtar hai)
-API_KEY = "AIzaSyBSUko24RIqj6t71fidq_RQTIpkq5cn6ug"
-try:
+API_KEY = "Enter Your Personal API_Key" #copy this link and create a api https://aistudio.google.com/api-keys
+ try:
     genai.configure(api_key=API_KEY)
 except Exception as e:
     st.error(f"API Key set karne mein error: {e}")
@@ -373,5 +373,6 @@ else:
                 except Exception as e:
                     st.error(f"Error: {e}")
                     st.session_state.chat_history.append({"role": "system", "text": f"Error: {e}", "sources": []})
+
 
 
